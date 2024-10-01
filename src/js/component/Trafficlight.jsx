@@ -60,9 +60,9 @@ const TrafficLight = () => {
         <div className="traffic-light">
             <img src={img1} alt="Traffic Light" />
             <span className={` ${isCycleRunning === false ? " " : trafficStates[currentColor].className}`}></span>
-            <span onClick={isCycleRunning ? null : (e) =>  toggleLight('red')} className={`$ ${activeLight === 'red' ? 'red-light' : 'red-light inactive'}`}></span>
-            <span onClick={isCycleRunning ? null : (e) => toggleLight('yellow')} className={` ${activeLight === 'yellow' ? 'yellow-light' : 'yellow-light inactive'}`}></span>
-            <span onClick={isCycleRunning ? null : (e) => toggleLight('green')}className={` ${activeLight === 'green' ? 'green-light' : 'green-light inactive' }`}></span>
+            <span onClick={isCycleRunning ? null : (e) =>  toggleLight('red')} className={`light ${isCycleRunning ? 'red-light inactive' : activeLight === 'red' ? 'red-light' : 'red-light inactive'}`}></span>
+            <span onClick={isCycleRunning ? null : (e) => toggleLight('yellow')} className={`light ${isCycleRunning ? 'yellow-light inactive' : activeLight === 'yellow' ? 'yellow-light' : 'yellow-light inactive'}`}></span>
+            <span onClick={isCycleRunning ? null : (e) => toggleLight('green')}className={`light ${isCycleRunning ? 'green-light inactive' : activeLight === 'green' ? 'green-light' : 'green-light inactive'}`}></span>
             <button onClick={toggleCycle} className="btn btn-primary ">
         {isCycleRunning ? "Stop Lights Circle" : "Start Lights Circle"}
       </button>
