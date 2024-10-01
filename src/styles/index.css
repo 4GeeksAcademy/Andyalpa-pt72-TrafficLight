@@ -9,6 +9,11 @@
     border-radius: 50%;
     box-shadow: rgb(235 5 5 / 73%) 0px 0px 21px 23px;
 }
+ .inactive {
+    box-shadow: none !important;
+    background: none !important;
+    }
+
 .green-light {
     top: 193px;
     left: 119px;
@@ -18,6 +23,16 @@
     height: 61px;
     border-radius: 50%;
     box-shadow: #198754 0px 0px 21px 23px;
+}
+.yellow-light {
+    top: 120px;
+    left: 119px;
+    position: fixed;
+    background-color: #ffc10780;
+    width: 62px;
+    height: 61px;
+    border-radius: 50%;
+    box-shadow: #fece41bf 0px 0px 21px 23px;
 }
 .yellow-light {
     top: 120px;
@@ -43,6 +58,11 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-around;
+}
+
+.btn {
+    height: fit-content;
+    align-self: center;
 }
 
 
